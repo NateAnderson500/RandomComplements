@@ -33,21 +33,26 @@ public class Main {
         // CHECKS THE INPUT
         while (!"done".equals(input)) {
             if (input.equals("complements")) {
-                if (select1 >= 20 && select1 <= 80) {
+                if (select1 >= 10 && select1 <= 20) {
                     System.out.println("You are amazing!");
+                } else if (select1 >= 21 && select1 <= 30) {
+                    System.out.println("You are the most pretty person in the room!");
+                } else if (select1 >= 31 && select1 <= 40) {
+                    System.out.println("You are hilarious!!");
+                } else if (select1 >= 41 && select1 <= 50) {
+                    System.out.println("I love you for who you are!");
+                } else if (select1 >= 51 && select1 <= 60) {
+                    System.out.println("You make me so happy!!");
                 } else {
-                    System.out.println("tests lol");
+                    System.out.println(":)");
                 }
             } else {
                 System.out.println("Please try typing again! Don't worry, spelling is hard for me tooo");
             }
+            select1 = ran.nextInt(top - bottom) + bottom;
             System.out.println("Would you like to get another complement?");
             System.out.println("If yes type \"complements\" if not, type \"done\"");
             input = in.next();
         }
-
-
-
-
     }
 }
