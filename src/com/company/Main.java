@@ -6,7 +6,7 @@ import java.util.Scanner;
  * A program that can auto generate complements using the random function.
  *
  * Author: Nate Anderson
- * Version: 0.5
+ * Version: 0.6
  */
 
 public class Main {
@@ -30,9 +30,11 @@ public class Main {
         System.out.println("Please enter the word \"complements\" to see your complement!");
         String input = in.next();
 
-        // CHECKS THE INPUT
+        // LOOPS THE CODE UNTIL "DONE" IS ENTERED
         while (!"done".equals(input)) {
+            // CHECKS THE INPUT
             if (input.equals("complements")) {
+                // PRINTS THE COMPLEMENTS BASED ON THE RANDOM NUMBER
                 if (select1 >= 10 && select1 <= 20) {
                     System.out.println("You are amazing!");
                 } else if (select1 >= 21 && select1 <= 30) {
@@ -46,12 +48,19 @@ public class Main {
                 } else {
                     System.out.println(":)");
                 }
+            // PRINTS AN ERROR MESSAGE IF THE INPUT IS INCORRECT
             } else {
                 System.out.println("Please try typing again! Don't worry, spelling is hard for me tooo");
             }
+
+            // RE-ROLLS THE RANDOM NUMBER IN PREPARATION FOR ANOTHER COMPLEMENT
             select1 = ran.nextInt(top - bottom) + bottom;
+
+            // ASKS IF THE USER WOULD LIKE ANOTHER COMPLEMENT AND IF NOT TO TYPE "DONE"
             System.out.println("Would you like to get another complement?");
             System.out.println("If yes type \"complements\" if not, type \"done\"");
+
+            // GETS THE INPUT
             input = in.next();
         }
     }
